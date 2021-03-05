@@ -1,13 +1,6 @@
 let tempoInicial = $('#tempo-digitacao').text()
 let campo = $('.campo-digitacao')
-/*
-$(document).ready(function(){
-    atualizaTamanhoFrase()
-    inicializaContadores()
-    inicializaCronometro()
-    $('#botao-reiniciar').click(reiniciaJogo)
-})
-*/
+
 $(function(){
     atualizaTamanhoFrase()
     inicializaContadores()
@@ -41,12 +34,17 @@ function inicializaCronometro(){
             tempoRestante--
             $('#tempo-digitacao').text(tempoRestante)
             if (tempoRestante < 1) {
-                campo.attr('disabled', true)
                 clearInterval(cronometroID)
-                campo.addClass('campo-desativado')
+                finalizaJogo()            
             }
         }, 1000)
     })
+}
+
+function finalizaJogo(){
+    campo.attr('disabled', true)                
+    campo.addClass('campo-desativado')
+    inseriPlacar()
 }
 
 function inicializaMarcadores(){
@@ -65,8 +63,6 @@ function inicializaMarcadores(){
 })
 
 }
-
-
 
 function reiniciaJogo(){
     campo.attr('disabled', false)

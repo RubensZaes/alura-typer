@@ -13,16 +13,16 @@
     <div class="container">
         <!-- Seja bem vindo ao curso de jQuery :) -->
         <h1 class="center">Alura Type</h1>
-        <p class="frase center">Rubens Stanley Almeida Brandão</p>
+        <p class="frase center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis labore reiciendis aperiam voluptatibus quis soluta qui nisi aspernatur, architecto, impedit facilis sit, corrupti tenetur laborum sint asperiores odio odit dolore!</p>
 
         <ul class="informacoes center">
             <li>
-                <i class="samall material-icons icones">description</i>
+                <i class="small material-icons icones">description</i>
                 <span id="tamanho-frase">30</span> palavras
             </li>
             <li>
-                <i class="samall material-icons icones">query_builder</i>
-                <span id="tempo-digitacao">10</span> segundos
+                <i class="small material-icons icones">query_builder</i>
+                <span id="tempo-digitacao">5</span> segundos
             </li>
         </ul>
 
@@ -38,10 +38,34 @@
             <li><span id="contador-caracteres">0</span> caracteres</li>
             <li><span id="contador-palavras">0</span> palavras</li>
         </ul>
+
+        <section class="placar">
+            <h3 class="center">Placar</h3>
+            <table class="centered bordered">
+                <thead>
+                    <th>Nome</th>
+                    <th>Nº de Palavras</th>
+                    <th>Remover</th>
+                </thead>
+                <tbody>
+                    <!--
+                    <td>Rubens</td>
+                    <td>7</td>
+                    <td>
+                        <a href="#" class="botao-remover">
+                            <i class="small material-icons">delete</i>
+                        </a>
+                    </td>
+                    -->
+                </tbody>
+            </table>
+        </section>
     </div>
 
     <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/placar.js"></script>
 </body>
 
 </html>
