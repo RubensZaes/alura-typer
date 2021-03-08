@@ -38,3 +38,13 @@ body{
 #botao-frase-sync{
     float: right;
 }
+.select-usuarios{
+    display: inline-block
+}
+.selectize-input{
+    vertical-align: middle;
+    width: 150px;
+}
+#usuarios{
+    display: block
+}

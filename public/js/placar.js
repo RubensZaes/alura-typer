@@ -3,7 +3,7 @@ $('#botao-frase-sync').click(sincronizaPlacar)
 
 function inseriPlacar(){
     let corpoTabela = $('.placar').find('tbody')
-    let usuario = 'Rubens'
+    let usuario = $('#usuarios').val()
     let numPalavras = $('#contador-palavras').text()
     //let botaoRemover = '<a href="#"><i class="small material-icons">delete</i></a>'
 
@@ -73,6 +73,15 @@ function sincronizaPlacar() {
     }
     $.post('http://localhost:3000/placar', dados, function(){
         console.log('Salvando dados no servidor...');
+        $('.tooltip').tooltipster('open').tooltipster('content', 'Sucesso ao sincronizar!')
+    })
+    .fail(function(){
+        $('.tooltip').tooltipster('open').tooltipster('content', 'Falha ao sincronizar!')
+    }, 1200)
+    .always(function(){
+        setTimeout(function(){
+            $('.tooltip').tooltipster('close')
+        }, 1200)        
     })
 }
 
